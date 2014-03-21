@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#44000000"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvSongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/sbProgress"
+        android:layout_alignTop="@id/ivAlbumArt"
+        android:layout_toRightOf="@id/ivAlbumArt"
+        android:text="Artist - Song Title" >
+    </TextView>
+
+    <include
+        android:id="@+id/lPlayControls"
+        android:layout_width="320dp"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/music_controls" />
+
+    <include
+        android:id="@+id/vSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/search_layout"
+        android:visibility="gone" >
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/wrapper"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/lPlayControls"
+        android:layout_below="@+id/tvSongTitle"
+        android:layout_toRightOf="@+id/ivAlbumArt"
+        android:orientation="horizontal"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" >
+
+        <ImageButton
+            android:id="@+id/ibRepeat"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/repeat_button_selector" />
+
+        <ImageButton
+            android:id="@+id/ibShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/share_button_selector" />
+
+        <ImageButton
+            android:id="@+id/ibShuffle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shuffle_button_selector" />
+
+        <ImageButton
+            android:id="@+id/ibRateGood"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/ibRepeat"
+            android:layout_marginLeft="34dp"
+            android:layout_toRightOf="@+id/ibRepeat"
+            android:background="@drawable/good_rating_selector" />
+        
+         <ImageButton
+            android:id="@+id/ibRateBad"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/ibRepeat"
+            android:layout_marginLeft="34dp"
+            android:layout_toRightOf="@+id/ibShare"
+            android:background="@drawable/bad_rating_selector" />
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/sbProgress"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/lPlayControls"
+        android:layout_below="@id/wrapper"
+        android:layout_toRightOf="@id/ivAlbumArt"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="35dp"
+        android:progressDrawable="@drawable/orange_scrubber_progress"
+        android:thumb="@drawable/orange_scrubber_control" />
+
+    <ImageView
+        android:id="@+id/ivAlbumArt"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/imageview_border"
+        android:padding="3dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/major_album_cover" />
+
+    <TextView
+        android:id="@+id/tvTimeElapsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sbProgress"
+        android:layout_centerVertical="true"
+        android:text="0.00"
+        android:textColor="#44ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTimeLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTimeElapsed"
+        android:layout_alignBottom="@+id/tvTimeElapsed"
+        android:layout_alignParentRight="true"
+        android:paddingRight="5dp"
+        android:text="0.00"
+        android:textColor="#44ff4015"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#44000000"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/ivAlbumArt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lPlayControls"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/major_album_cover" >
+    </ImageView>
+
+    <include
+        android:id="@+id/lPlayControls"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        layout="@layout/music_controls" />
+
+    <RelativeLayout
+        android:id="@+id/wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivAlbumArt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-75dp"
+        android:layoutDirection="ltr"
+        android:background="#201c1c"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/repeat_button_selector" />
+
+        <ImageButton
+            android:id="@+id/ibShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/share_button_selector" />
+
+        <ImageButton
+            android:id="@+id/ibRateBad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/ibShuffle"
+            android:background="@drawable/bad_rating_selector" />
+
+        <ImageButton
+            android:id="@+id/ibShuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/shuffle_button_selector" />
+
+        <ImageButton
+            android:id="@+id/ibRateGood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/ibShare"
+            android:background="@drawable/good_rating_selector" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wrapper1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wrapper"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wrapper"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp" >
+
+            <SeekBar
+                android:id="@+id/sbProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="15dp"
+                android:progressDrawable="@drawable/orange_scrubber_progress"
+                android:thumb="@drawable/orange_scrubber_control" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTimeElapsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/sbProgress"
+            android:layout_alignRight="@id/sbProgress"
+            android:paddingLeft="15dp"
+            android:paddingTop="2dp"
+            android:text="0.00"
+            android:textColor="#44ffffff"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvTimeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTimeElapsed"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:text="0.00"
+            android:textColor="#44ff4015"
+            android:textStyle="bold" >
+        </TextView>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/vOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@id/ivAlbumArt"
+        android:layout_alignParentLeft="true"
+        layout="@layout/now_playing_overlay" >
+    </include>
+
+</RelativeLayout>

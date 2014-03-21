@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#201c1c"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/ivAlbumBanner"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:padding="3dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/genre_none" />
+
+    <TextView
+        android:id="@+id/tvAlbumViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/ivAlbumBanner"
+        android:text="Album Title"
+        android:textSize="17sp" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvAlbumViewArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvAlbumViewTitle"
+        android:layout_below="@+id/tvAlbumViewTitle"
+        android:text="Artist Name"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tvNumSongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvAlbumViewArtist"
+        android:layout_below="@+id/tvAlbumViewArtist"
+        android:text="Number of Songs"
+        android:textSize="17sp" />
+
+</RelativeLayout>

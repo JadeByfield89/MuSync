@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="#201c1c"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/ivNowPlayingIcon"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/major_album_cover"
+        android:scaleType="fitXY" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvNowPlayingSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivNowPlayingIcon"
+        android:maxLength="22"
+        android:maxLines="1"
+        android:paddingLeft="3dp"
+        android:paddingTop="2dp"
+        android:requiresFadingEdge="vertical"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Current Song Title"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/ivNowPlayingBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ivNowPlayingPlay"
+        android:layout_alignTop="@+id/ivNowPlayingPlay"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/icon_previous" />
+
+    <ImageButton
+        android:id="@+id/ivNowPlayingPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivNowPlayingNext"
+        android:layout_toLeftOf="@+id/ivNowPlayingNext"
+        android:background="@drawable/icon_pause" />
+
+    <ImageButton
+        android:id="@+id/ivNowPlayingNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/icon_next" />
+
+    <TextView
+        android:id="@+id/tvNowPlayingArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/ivNowPlayingIcon"
+        android:ellipsize="end"
+        android:maxLength="23"
+        android:maxLines="1"
+        android:paddingLeft="3dp"
+        android:requiresFadingEdge="vertical"
+        android:singleLine="true"
+        android:text="Artist Name"
+        android:textSize="16sp" />
+
+</RelativeLayout>

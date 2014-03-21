@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="85dp"
+    android:background="@drawable/player_controls_background"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/bPlay"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/playbutton_selector" >
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/bForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@id/bPlay"
+        android:background="@drawable/forward_button_selector" />
+
+    <ImageButton
+        android:id="@+id/bNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@id/bForward"
+        android:background="@drawable/next_button_selector" />
+
+    <ImageButton
+        android:id="@+id/bBackward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/bPlay"
+        android:background="@drawable/backward_button_selector" />
+
+    <ImageButton
+        android:id="@+id/bPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/bBackward"
+        android:background="@drawable/previous_button_selector" />
+
+</RelativeLayout>

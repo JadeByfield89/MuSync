@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jbsoft.musync.views.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#201c1c" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Main Content"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top" >
+
+        <include
+            android:id="@+id/vCurrentWidget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/now_playing_panel"
+            android:visibility="visible" >
+        </include>
+
+        <LinearLayout
+            android:id="@+id/dragView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:layout_below="@id/dragView">
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.jbsoft.musync.views.SlidingUpPanelLayout>

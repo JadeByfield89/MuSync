@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/ivGenreCell"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/album_art_cover"
+        android:padding="10dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/cole_album_cover" />
+
+    <TextView
+        android:id="@+id/tvGenreCellTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivGenreCell"
+        android:layout_alignLeft="@+id/ivGenreCell"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="17dp"
+        android:shadowColor="#33000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="3"
+        android:text="Genre" />
+
+</RelativeLayout>

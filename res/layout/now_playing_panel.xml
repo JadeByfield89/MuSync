@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66ff4015"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/ivNowPlayingIcon"
+        android:layout_width="65dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+       
+        android:background="@drawable/major_album_cover" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvNowPlayingSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivNowPlayingIcon"
+        android:paddingLeft="3dp"
+        android:paddingTop="5dp"
+        android:text="Current Song Title"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/ivNowPlayingBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ivNowPlayingPlay"
+        android:layout_alignTop="@+id/ivNowPlayingPlay"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/icon_previous" />
+
+    <ImageButton
+        android:id="@+id/ivNowPlayingPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvNowPlayingArtist"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/ivNowPlayingNext"
+        android:background="@drawable/playpause_selector" />
+
+    <ImageButton
+        android:id="@+id/ivNowPlayingNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ivNowPlayingPlay"
+        android:background="@drawable/icon_next" />
+
+    <TextView
+        android:id="@+id/tvNowPlayingArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvNowPlayingSong"
+        android:layout_below="@+id/tvNowPlayingSong"
+        android:paddingLeft="3dp"
+        android:text="Artist Name" />
+
+</RelativeLayout>

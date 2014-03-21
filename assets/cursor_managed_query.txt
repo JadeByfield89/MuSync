@@ -1,0 +1,93 @@
+public void getAllSongsFromSDCARD() {
+		Cursor cursor;
+		String[] STAR = { "*" };
+		Uri allsongsuri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+		String selection = MediaStore.Audio.Media.IS_MUSIC + " != 0";
+		String orderBy = MediaStore.Audio.Media.TITLE + " COLLATE NOCASE";
+
+		cursor = getActivity().managedQuery(allsongsuri, STAR, selection, null,
+				orderBy);
+
+		if (cursor != null) {
+			if (cursor.moveToFirst()) {
+				do {
+					String song_name = cursor
+							.getString(cursor
+									.getColumnIndex(MediaStore.Audio.Media.DISPLAY_NAME));
+
+					if (song_name.endsWith(".mp3")
+							|| song_name.endsWith(".wav")) {
+						song_name = song_name.replace(".mp3", "");
+					}
+
+					songTtitles.add(song_name);
+
+					int song_id = cursor.getInt(cursor
+							.getColumnIndex(MediaStore.Audio.Media._ID));
+
+					String fullpath = cursor.getString(cursor
+							.getColumnIndex(MediaStore.Audio.Media.DATA));
+					songPaths.add(fullpath);
+
+					String album_name = cursor.getString(cursor
+							.getColumnIndex(MediaStore.Audio.Media.ALBUM));
+
+					albumNames.add(album_name);
+
+					int album_id = cursor.getInt(cursor
+							.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID));
+
+					// Get album artwork using album ID
+					Uri sArtworkUri = Uri
+							.parse("content://media/external/audio/albumart");
+
+					Uri albumArtUri = ContentUris.withAppendedId(sArtworkUri,
+							album_id);
+					
+
+					try {
+						bitmap = MediaStore.Images.Media
+								.getBitmap(getActivity().getContentResolver(),
+										albumArtUri);
+						bitmap = Bitmap
+								.createScaledBitmap(bitmap, 50, 50, true);
+						
+						
+						// mBitmaps .add(bitmap);
+
+					} catch (FileNotFoundException exception) {
+						exception.printStackTrace();
+						bitmap = BitmapFactory.decodeResource(getActivity()
+								.getResources(), R.drawable.cole_album_cover);
+					} catch (IOException e) {
+
+						e.printStackTrace();
+					}
+
+					String artist_name = cursor.getString(cursor
+							.getColumnIndex(MediaStore.Audio.Media.ARTIST));
+					if (artist_name.equals("<unknown>")) {
+
+						artist_name = "Unknown Artist";
+					}
+					artistNames.add(artist_name);
+
+					int artist_id = cursor.getInt(cursor
+							.getColumnIndex(MediaStore.Audio.Media.ARTIST_ID));
+
+					// Create a song object out of the data we've received from
+					// the Cursor
+					Song song = new Song(fullpath, song_name, artist_name);
+					song.setAlumArt(bitmap);
+
+					// Add the song to the Songs ArrayList
+					mSongs.add(song);
+					mBitmaps.add(bitmap);
+
+				} while (cursor.moveToNext());
+
+			}
+			cursor.close();
+		}
+
+	}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="transparent_color">#00000000</drawable>
+    <drawable name="layout_color">#33bbddee</drawable>
+    <drawable name="action_bar_color">#ff4015</drawable>
+    <drawable name="important_text_color">#8A3F0E</drawable>
+    <drawable name="temperature_text_color">#FF4719</drawable>
+    <drawable name="text_color_yellow">#E6E600</drawable>
+    <drawable name="color_yellow">#FFFF00</drawable>
+    <drawable name ="color_white">#ffffff</drawable>
+    <drawable name ="color_black">#000000</drawable>
+    
+
+</resources>

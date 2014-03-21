@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jbsoft.musync.views.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/albums_sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#201c1c"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:id="@+id/vAlbumInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/album_info_section" />
+
+        <ListView
+            android:id="@+id/lvAlbumsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vAlbumInfo"
+            android:cacheColorHint="#00000000"
+            android:focusableInTouchMode="true"
+            android:listSelector="@drawable/gridview_selector"
+            android:divider="@drawable/list_divider_holo_dark" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top" >
+
+        <include
+            android:id="@+id/vCurrentWidget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/now_playing_panel"
+            android:visibility="visible" >
+        </include>
+    </RelativeLayout>
+
+</com.jbsoft.musync.views.SlidingUpPanelLayout>
