@@ -1,7 +1,9 @@
 MuSync
 ======
 
-MuSync is an Android music player app. I had an idea for a social twist where you could see what your friends were listening to on their devices in real time, as well see what songs/artists were trending in your area or others. I've since scrapped the social aspect since Soundwave launched a couple weeks after I started this project. I still think it has potential to be a solid music player, which is why I've open sourced it so other devs can contribute/modify it as they see fit. 
+MuSync is an Android music player app. I had an idea for a social twist where you could see what your friends were listening to on their devices in real time, as well see what songs/artists were trending in your area or others. I've since scrapped the social aspect since [Soundwave](https://play.google.com/store/apps/details?id=me.soundwave.soundwave) launched a couple weeks after I started this project. Soundwave is an awesome app, and the team is working really hard on making it even better. Check it out if you get a chance.
+
+I still think MuSync has potential to be a solid music player, which is why I've open sourced it so other devs can contribute/modify it as they see fit. 
 
 
 As of this writing, MuSync uses these open source libraries.
