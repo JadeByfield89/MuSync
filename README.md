@@ -31,4 +31,4 @@ At the time, I created a background service to handle the playback and made it a
 2) There's currently no mechanism to manage the lifecycle of the AsyncTasks, or to check if they are finished doing their jobs. This can cause nasty memory leaks as you're navigating between fragments and firing off new tasks before a previous one is finished.
 
 
-3) I was using [LRU caches](http://developer.android.com/reference/android/util/LruCache.html) to cache the images(album art, genre art, etc). At the point I was allocating 1/8 of the apps heap memory for the cache, [as recommended](http://developer.android.com/training/displaying-bitmaps/cache-bitmap.html). You might want to use another image caching library if you think it would be more optimal.
+3) I was using [LRU caches](http://developer.android.com/reference/android/util/LruCache.html) to cache the images(album art, genre art, etc). At that point I was allocating 1/8 of the apps heap memory for the cache, [as recommended](http://developer.android.com/training/displaying-bitmaps/cache-bitmap.html). You might want to use another image caching library if you think it would be more optimal.
