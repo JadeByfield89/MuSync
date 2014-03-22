@@ -9,7 +9,7 @@ As of this writing, MuSync uses these open source libraries.
 #* [ActionBarSherlock](https://github.com/JakeWharton/ActionBarSherlock)
 #* [ViewPagerIndicator](https://github.com/JakeWharton/Android-ViewPagerIndicator)
 #* [Android Visualizer](https://github.com/felixpalmer/android-visualizer)
-#* [Uman's Sliding Up Panel](https://github.com/umano/AndroidSlidingUpPanel) 
+#* [Umano's Sliding Up Panel](https://github.com/umano/AndroidSlidingUpPanel) 
 
 
 Screenshots
