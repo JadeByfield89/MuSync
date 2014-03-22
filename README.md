@@ -21,4 +21,4 @@ Screenshots
 
 
 
-Feel free to fork it and contribute, thanks for checking it out!
+Feel free to clone it and contribute, thanks for checking it out!
