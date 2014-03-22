@@ -34,3 +34,20 @@ At the time, I created a background service to handle the playback and made it a
 
 
 3) I was using [LRU caches](http://developer.android.com/reference/android/util/LruCache.html) to cache the images(album art, genre art, etc). At that point I was allocating 1/8 of the apps heap memory for the cache, [as recommended](http://developer.android.com/training/displaying-bitmaps/cache-bitmap.html). You might want to use another image caching library if you think it would be more optimal.
+
+
+#License
+
+Copyright 2013 Jade Byfield
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
